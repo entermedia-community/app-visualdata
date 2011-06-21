@@ -218,3 +218,9 @@ margin: 0 20px 20px 0px;
 {
 	text-decoration: underline;
 }
+
+.uipanel
+{
+	padding: 5px;
+	margin-bottom: 20px;
+}
