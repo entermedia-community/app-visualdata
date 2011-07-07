@@ -64,11 +64,14 @@ Asset Type Not Defined
 $context.putPageValue("searcher", $searcher)  
 #if($asset.assettype && $asset.assettype.length() > 0)
 $context.putPageValue("view", "asset/assettype/$asset.assettype/$target.id")
+
 #else
 
 $context.putPageValue("view", "assettype/default/$target.id")
 
 #end 
+
+
 $context.putPageValue("data", $asset)
 
 $pages.include("$apphome/components/xml/detaileditor.html$detaileditsuffix", $context)

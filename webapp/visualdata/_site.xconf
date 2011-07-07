@@ -37,6 +37,7 @@
 	
 	<script id="hiverintent" src="/${applicationid}/components/javascript/hoverIntent.js"></script>
 	<script id="entermedia" src="/${applicationid}/components/javascript/entermedia.js">     </script>	
+	<script id="validateandedit" src="/${applicationid}/components/javascript/validateandedit.js">     </script>	
 
 	<script id="ui-components" src="/${applicationid}/components/javascript/ui-components.js">     </script>	
 

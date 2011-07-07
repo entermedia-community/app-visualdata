@@ -15,7 +15,7 @@
 #else
 
 #set( $thumb = "$home/$catalogid/downloads/preview/large/${asset.sourcepath}/thumb.jpg" )
-<a href="$source" style="background-image:url($context.siteRoot$thumb)" class="mediaplayer">
+<a href="#uuencode($amazon)" style="background-image:url($context.siteRoot$thumb)" class="mediaplayer">
 	<img src="$context.siteRoot$root/play_large.png" alt="$asset"/> 
 </a> 
 #end
@@ -52,7 +52,7 @@ a.mediaplayer:hover {
 			    // configure clip to use "lighthttpd" plugin for providing video data 
 			    clip: 
 			    { 
-			        url: '#uuencode($amazon)',
+			    
 			        provider: 'lighttpd',
 			        scaling: 'fit' 
 		    	}, 
