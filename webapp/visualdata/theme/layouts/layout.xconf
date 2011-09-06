@@ -3,5 +3,5 @@
    	<layout/>
    	<inner-layout />
   	<property name="editable">false</property>
-  	<generator name="admintoolbarGenerator"/>
+  	<generator name="admintoolbarGenerator" />
 </page>
