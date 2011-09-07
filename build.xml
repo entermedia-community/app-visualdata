@@ -45,7 +45,5 @@
 	        tofile="${deployDir}/install.xml"/>
 	</target>
 	  
-<!-- test branch -->  
   
-<!-- test fetch upstream --> 
 </project>
