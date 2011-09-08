@@ -1,0 +1,6 @@
+<page>
+	<property name="exportpreset">vd1</property>
+	<property name="originalpreset">0</property>
+	<property name="smartjogpreset">3</property>
+	<property name="localpublishdestination">local</property>
+</page>
