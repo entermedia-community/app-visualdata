@@ -8,23 +8,6 @@ $context.putPageValue("searcher", $searcher)
 
 <form  name="advancedsearch" action="$apphome/views/search/search.html" >
 
-<div class="emsectionheader">
-<table>
-<tr>
-<td>
-<h3>Search</h3>
-</td>
-<td>
-<input name="field" value="description" type="hidden" />
-<input name="operation" value="startswith" type="hidden" />
- <input type="text" name="description.value"  value="$!hits.getInput('description')"/>
-</td>
-
-</tr>
-
-</table>
-</div>
-
 #set($usestartswith = $page.isPropertyTrue('usestartswith'))
 $context.putPageValue("usestartswith",$usestartswith)
 
@@ -38,6 +21,19 @@ $context.putPageValue("usestartswith",$usestartswith)
 
 <table 	 width="100%" class="em-widget-content">
 	<tr class="emsearchfieldrow">
+
+	<tr>
+	<td>
+<h3>[[Search]]</h3>
+</td>
+<td>
+<input name="field" value="description" type="hidden" />
+<input name="operation" value="startswith" type="hidden" />
+ <input type="text" name="description.value"  value="$!hits.getInput('description')"/>
+</td><td></td>
+
+</tr>
+
 	#foreach( $detail in $details)
 		$context.putPageValue("detail", $detail)
 		#if ($detail.isLeaf())
