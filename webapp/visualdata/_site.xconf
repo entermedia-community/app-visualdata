@@ -25,7 +25,7 @@
 	<style 	id="categorypicker" href="${themeprefix}/styles/pages/categorypicker.css" />
 	<style 	id="jquery-ui-css" href="${themeprefix}/jqueryui/humanity/jquery-ui-1.8.12.custom.css" />
 
-	<script id="jquery" src="/${applicationid}/components/javascript/jquery-1.3.2.js" />
+	<script id="jquery" src="/${applicationid}/components/javascript/jquery-1.6.1.js" />
 	<script id="jquery-ui" src="/${applicationid}/components/javascript/jquery-ui-1.8.12.custom.min.js" />
 	<script id="jquery-fancybox" src="/${applicationid}/components/javascript/jquery.fancybox/jquery.fancybox-1.2.1.js" />
 	<style 	id="jquery-fancybox-css" href="/${applicationid}/components/javascript/jquery.fancybox/jquery.fancybox.css" />
@@ -34,6 +34,7 @@
 	<script id="jquery-livequery" src="/${applicationid}/components/javascript/jquery.livequery.js" />
 	<script id="jquery-autocomplete" src="/${applicationid}/components/javascript/jquery.autocomplete.js"/>
 	<script id="jquery-validate"  src="/${applicationid}/components/javascript/jquery.validate.js"/>
+	<script id="jquery-tablesorter" src="/${applicationid}/components/javascript/jquery.tablesorter.js" />
 	
 	<script id="hiverintent" src="/${applicationid}/components/javascript/hoverIntent.js"></script>
 	<script id="entermedia" src="/${applicationid}/components/javascript/entermedia.js">     </script>	
