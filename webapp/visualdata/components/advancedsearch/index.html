@@ -6,13 +6,16 @@
 $context.putPageValue("view", $view)
 $context.putPageValue("searcher", $searcher)
 
-<form  name="advancedsearch" action="$apphome/views/search/search.html" >
+<div class="emsectionheader"></div>
 
 #set($usestartswith = $page.isPropertyTrue('usestartswith'))
 $context.putPageValue("usestartswith",$usestartswith)
 
 #set( $edit = $context.getRequestParameter("editadvsearch"))
-
+#if( $edit)
+$context.putPageValue("edit",$edit)
+#end
+<form  name="advancedsearch" action="$home$apphome/views/search/search.html" class="em-widget-content">
 ##We need 2 things passed in: $searcher, $view or $searcher $details
 #if (!$details && $view)
 
@@ -29,7 +32,7 @@ $context.putPageValue("usestartswith",$usestartswith)
 <td>
 <input name="field" value="description" type="hidden" />
 <input name="operation" value="startswith" type="hidden" />
- <input type="text" name="description.value"  value="$!hits.getInput('description')"/>
+<input name="description.value"  value="$!hits.getInput('description')" type="text" />
 </td><td></td>
 
 </tr>
@@ -37,36 +40,20 @@ $context.putPageValue("usestartswith",$usestartswith)
 	#foreach( $detail in $details)
 		$context.putPageValue("detail", $detail)
 		#if ($detail.isLeaf())
-			<tr class="emsearchfieldrow">
-				#if ($edit == "true")
-				<td>
-					<a href="#" onclick="javascript:deleteField('$detail.id'); return false;">
-					<img src="$home$apphome/theme/images/navigation/deletesm.png"/>
-					</a>
-				</td>
-				#end
-				<td valign="middle" class="emsearchfield" nowrap="true">
-					$!detail.getText($context) 
-				</td>
-				<td id="detail_${detail.id}" align="left" valign="middle" class="emsearchfieldvalue  ui-widget" nowrap >
-					<input name="field" value="$searcher.getCatalogId():$view:${detail.getId()}" type="hidden">
-					$pages.include("/${applicationid}/components/advancedsearch/detail.html", $context)
-				</td>
-			</tr>
+			$pages.include("/${applicationid}/components/advancedsearch/detailedit.html", $context)
 		#else
 			$pages.include("/${applicationid}/components/advancedsearch/section.html", $context)
 		#end
 	#end
-		<tr>
 	<td>
 	</td>
-	<td><input type="submit" value="Search" class="ui-button ui-widget ui-state-default ui-corner-all"/>
+	<td><input type="submit" value="Search" />
 	</td>
 	</tr>
 	
 </table>
 
-
+<input type="hidden" name="resultstype" value="table" />
 
 </form>
 
@@ -87,7 +74,6 @@ $context.putPageValue("usestartswith",$usestartswith)
 		#foreach( $detail in $alldetails)
 			<option value="$detail.id">&nbsp;&nbsp;&nbsp;&nbsp;$detail.getText($context)</option>
 		#end	
-		
 
 	</select>
 	<a class="ajax" targetdiv="advsearchpanel" href="$home$apphome/components/advancedsearch/index.html?oemaxlevel=1&editadvsearch=false&searchtype=$searcher.getSearchType()&catalogid=$searcher.getCatalogId()&view=$view">Done</a>
@@ -96,7 +82,7 @@ $context.putPageValue("usestartswith",$usestartswith)
 
 
 #else
-	<a class="ajax" targetdiv="advsearchpanel" href="$home$apphome/components/advancedsearch/index.html?oemaxlevel=1&editadvsearch=true&searchtype=$searcher.getSearchType()&catalogid=$searcher.getCatalogId()&view=$view"><img align="right" src="$apphome/theme/images/navigation/write-note.png"/></a>
+	<a class="ajax" targetdiv="advsearchpanel" href="$home$apphome/components/advancedsearch/index.html?oemaxlevel=1&editadvsearch=true&searchtype=$searcher.getSearchType()&catalogid=$searcher.getCatalogId()&view=$view"><img align="right" src="$home$themeprefix/images/navigation/write-note.png"/></a>
 	<br/>
 #end
 
