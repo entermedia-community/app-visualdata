@@ -6,9 +6,10 @@
 	<property name="appname" value="${ant.project.name}" />
 	<property name="org" value="eInnovation, inc." />
 	<property name="build" location="./tmp/oe_upgrade" />
+	<property name="unpack_dest" location="${build}/unpacked" />
 	<property name="wardir" location="${build}/wartmp" />
 	<property name="webinf" location="WEB-INF" />
-	<property name="final_dest" value="../visualdata_test" />
+	<property name="final_dest" value="../visualdata" />
 	<property name="payload" value="${appname}.zip" />
 	<property name="lastbuild" value="http://dev.entermediasoftware.com/jenkins/view/Visual%20Data/job/app-visualdata%20visual_data/lastSuccessfulBuild/artifact/deploy/${payload}"/>
 
@@ -18,7 +19,7 @@
 	</target>
 
 	<target name="init">
-		<mkdir dir="${build}/unpacked" />
+		<mkdir dir="${unpack_dest}" />
 		<mkdir dir="${final_dest}" />
 	</target>
 
@@ -28,7 +29,7 @@
 	</target>
 
 	<target name="unzip" depends="update-dependencies">
-		<unzip dest="${build}/unpacked">
+		<unzip dest="${unpack_dest}">
 			<fileset dir="${build}">
 				<include name="${payload}" />
 			</fileset>
