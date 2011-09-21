@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="default" name="upgrade">
+<project basedir="." default="default" name="app-visualdata">
 
 	<target name="default" depends="clean, upgrade" />
 
