@@ -38,7 +38,7 @@
 
 	<target name="upgrade" depends="unzip">
 		<copy todir="${final_dest}" preservelastmodified="true">
-			<fileset dir="${build}/visualdata" />
+			<fileset dir="${unpack_dest}/visualdata" />
 		</copy>
 		<delete dir="${build}" />
 	</target>
