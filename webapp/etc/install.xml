@@ -8,7 +8,7 @@
 	<property name="build" location="./tmp/oe_upgrade" />
 	<property name="wardir" location="${build}/wartmp" />
 	<property name="webinf" location="WEB-INF" />
-	<property name="final_dest" value="../visualdata" />
+	<property name="final_dest" value="../visualdata_test" />
 	<property name="payload" value="${appname}.zip" />
 	<property name="lastbuild" value="http://dev.entermediasoftware.com/jenkins/view/Visual%20Data/job/app-visualdata%20visual_data/lastSuccessfulBuild/artifact/deploy/${payload}"/>
 
