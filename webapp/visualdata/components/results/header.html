@@ -3,12 +3,11 @@
 <td valign="top" width="100%" >
 <ul class="embuttons">
 #set ($classname="enabled")
-
-
- #if($context.getRequestParameter("reporttype") != "01newlyuploaded")
- 	
-
+#if($context.getRequestParameter("reporttype") == "02deletedfiles")
 <li>
+	<a href="$home$apphome/views/activity/restored/restored.html?sourcepath=$asset.sourcepath&hitssessionid=$!hits.getSessionId()"><span>Restore</span></a>
+ #elseif($context.getRequestParameter("reporttype") != "01newlyuploaded")
+ <li>
 	<a href="$home$apphome/views/activity/downloadassets.html?hitssessionid=$!hits.getSessionId()" ><span>Download</span></a>
 </li>
 <li>
@@ -19,7 +18,7 @@
 </li>
 
 #end
-#if($content.isPropertyTrue("showaddselections"))
+#if($content.isPropertyTrue("showaddselections") && $context.getRequestParameter("reporttype") != "02deletedfiles")
 <li>
 	<a class="toggleitem" targetdiv="nothing" href="$home/$applicationid/components/results/addalltobasket.html?hitssessionid=$hits.getSessionId()"><span>Add to Basket</span></a>
 </li>
