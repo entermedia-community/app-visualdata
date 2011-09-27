@@ -224,3 +224,96 @@ margin: 0 20px 20px 0px;
 	padding: 5px;
 	margin-bottom: 20px;
 }
+
+
+
+
+ul.emheaderbuttons li a span {
+	border:1px solid #2790B0;
+    border-radius: 8px 8px 8px 8px;
+	float: left;
+	font-size: 12px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	line-height: 23px;
+	padding: 5px 15px;
+	position: relative;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+ul.emheaderbuttons li a.current span, ul.emheaderbuttons li a:hover span {
+	color: #f3f3f3;
+	text-decoration: none;
+	background: #23819E;
+	border:1px solid #1C6E88;
+
+	-webkit-border-radius: 8px 8px 8px 8px;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-o-border-radius: 8px 8px 8px 8px;
+	-ms-border-radius: 8px 8px 8px 8px;
+	-khtml-border-radius: 8px 8px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
+
+}
+
+ul.emheaderbuttons li.navactive a {
+	background: #23819E;
+	border: 1px solid #1C6E88;
+
+	-webkit-border-radius: 8px 8px 8px 8px;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-o-border-radius: 8px 8px 8px 8px;
+	-ms-border-radius: 8px 8px 8px 8px;
+	-khtml-border-radius: 8px 8px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+ul.emheaderbuttons li.navactive a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+li.navactive a {
+	color: #fff;
+	text-decoration: none;
+}
+
+li.navactive a:hover span {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navactive:hover {
+	background: #FFB15F;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-o-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-khtml-border-radius: 8px;
+	border-radius: 8px;
+}
+
+ul.emheaderbuttons li.navselected a {
+	background: #87AC5B;
+	border: 1px solid #647F43;
+
+	-webkit-border-radius: 8px 8px 8px 8px;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-o-border-radius: 8px 8px 8px 8px;
+	-ms-border-radius: 8px 8px 8px 8px;
+	-khtml-border-radius: 8px 8px 8px 8px;
+	border-radius: 8px 8px 8px 8px;
+}
+
+
+.embuttons {
+	list-style: none;
+	margin: 8px 0px 4px 0;
+}
+
+.emdetailactions li, .embuttons li {
+	margin-left: 5px;
+	float: left;
+}

@@ -13,10 +13,11 @@ $pages.include("$apphome/components/savedsearches/index.html", $context)
 $pages.include("$apphome/components/dontshow/index.html")
 </div>
 
-<div id="advsearchpanel" style="margin-top: 20px;">
+<div class="em-rounded"  id="advsearchpanel" style="margin-top: 20px;">
 $context.putPageValue("view", "asset/advancedsearch")
 $context.putPageValue("searcher", $mediaarchive.getAssetSearcher())
 
+<h3>Search</h3>
 
 
 ##set ($details = $mediaarchive.getAssetSearcher().getDetailsForView("asset/advancedsearch", $userprofile))
