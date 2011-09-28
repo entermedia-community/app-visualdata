@@ -34,7 +34,7 @@ $pages.include("/system/components/xml/detaileditor.html", $context)
 <li>
 	<a href="#" onclick="jQuery(this).closest('form').submit();"><span>Save</span></a>
 </li>
-<li><a href='$home$content.searchhome/index.html'><span>Cancel</span></a></li>
+<li><a href="$home$apphome/views/settings/production/episodes/fieldsearch.html?title.value=$!titleid&field=title&operation=matches"><span>Cancel</span></a></li>
 #if($action!='add')
 <li><a href='$home$content.searchhome/edit/delete.html?searchtype=$searcher.searchType&catalogid=$searcher.catalogId&id=$!data.id'>
 	<span>
