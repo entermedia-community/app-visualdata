@@ -15,7 +15,7 @@ $pages.include("$apphome/components/basket/menuitem.html")
 #end
 
 #if( $canviewupload )
- <li #if($section=="upload")$selected#end><a href="$home$apphome/views/upload/index.html">Upload</a></li>
+ <li #if($section=="upload")$selected#end><a href="$home$apphome/views/upload/index.html">Upload</a> <div id="emsyncstatus"></div></li>
 #end
 
 #if( $canvieworders )
