@@ -14,7 +14,7 @@ $context.putPageValue("view", $view)
 #set($action= $context.getRequestParameter("action"))
 #set($title = $titlesearcher.searchById($titleid))
 $context.putPageValue("title",$title)
-
+$home$content.searchhome
 <form id="dataeditor" name="dataeditor" method="post" action="$home$content.searchhome/edit/save.html" >
 	<input name="save" type="hidden" value="true" />
 	<input name="id" type="hidden" value="$!data.id" />
@@ -22,8 +22,11 @@ $context.putPageValue("title",$title)
 	<input name="catalogid" type="hidden" value="$searcher.catalogId" />
 	<input name="searchtype" type="hidden" value="$searcher.searchType" />
 	<input name="origURL"  type="hidden" value="$!origURL" />
-	<input name="field"  type="hidden" value="title" />
 	<input name="title.value"  type="hidden" value="$title.id" />
+	<input name="field"  type="hidden" value="title" />
+	<input name="operation"  type="hidden" value="matches" />
+	<input name="operation"  type="hidden" value="matches" />
+	<input name="sortby"  type="hidden" value="name" />
 	
 #set($titleid = $context.getRequestParameter("title.value"))	
 $data.setProperty("title",$titleid)
