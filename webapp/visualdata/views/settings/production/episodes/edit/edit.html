@@ -14,7 +14,7 @@ $context.putPageValue("view", $view)
 #set($action= $context.getRequestParameter("action"))
 #set($title = $titlesearcher.searchById($titleid))
 $context.putPageValue("title",$title)
-$home$content.searchhome
+
 <form id="dataeditor" name="dataeditor" method="post" action="$home$content.searchhome/edit/save.html" >
 	<input name="save" type="hidden" value="true" />
 	<input name="id" type="hidden" value="$!data.id" />
