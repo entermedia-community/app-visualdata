@@ -1,6 +1,7 @@
 #set ($link = $mediaarchive.asLinkToPreview($asset.sourcepath))
 #set($indexOf = $hits.indexOf($asset.catalogid, $asset.id))
 
+#set($expired = $order.isExpired())
 <table class="emplayerbox">
 <tr>
 <td valign="top"  >
@@ -9,9 +10,13 @@
 	<h2>	
 	$asset
 	</h2>
+
+	#if ($expired)
+		<h3>This order has expired.</h3>
+	#else
 	$pages.include("$apphome/components/mediaviewer/player/types/${type}.html",$context)
 	<div class="emviewercaption">$!asset.caption</div>
-	
+	#end
 </td>
 </tr>
 </table>
