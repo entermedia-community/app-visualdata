@@ -3,8 +3,8 @@
 <td valign="top"  >
 	#set( $type = $mediaarchive.getMediaRenderType($asset.fileFormat))
 
-	<h2>	
-	$asset
+	<h2>
+	$asset.name
 	</h2>
 	#if($order.ordertype=='email' && $order.isExpired())
 		<h3>This order has expired.</h3>

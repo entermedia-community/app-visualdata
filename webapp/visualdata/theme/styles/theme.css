@@ -224,3 +224,23 @@ margin: 0 20px 20px 0px;
 	padding: 5px;
 	margin-bottom: 20px;
 }
+#emcontainer .assetrow tr
+{
+	border-top: 2px;
+}
+#emcontainer .activityrow
+{
+	border-top: solid 1px #666;
+}
+#emcontainer .activityrow .oeinputform
+{
+	margin: 80px 0px 0px 40px;
+}
+#emcontainer .emdatafieldvalue
+{
+	font-weight: bold;
+}
+
+
+
+
