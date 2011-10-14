@@ -43,7 +43,7 @@ h3
   
 #emcontainer table
 {
-	width: 100%;
+	//width: 100%;
 	border: 0 none;
 	border-collapse: collapse;
 }
@@ -234,7 +234,7 @@ margin: 0 20px 20px 0px;
 }
 #emcontainer .activityrow .oeinputform
 {
-	margin: 80px 0px 0px 40px;
+	margin: 80px 0px 0px 80px;
 }
 #emcontainer .emdatafieldvalue
 {
