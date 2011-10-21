@@ -8,7 +8,8 @@
  * @copyright       Copyright 2005-2010, Dirk Jesse
  * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
  *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
- * @link            http://www.yaml.de
+ * @link            http://www.yaml.defont
+ 
  * @package         yaml
  * @version         3.2.1
  * @revision        $Revision:392 $
@@ -42,12 +43,11 @@
     float:left; /* LTR */
     /* (en) Left margin of the first button  */
     /* (de) Abstand des ersten Buttons vom linken Rand  */
-    border-left:1px #aaa solid;
     border-right:1px #fff solid;
   }
 
   .hlist ul li {
-    border-left:1px black solid;
+    //border-left:1px black solid;
     border-right:1px black solid;
     /* (en|de) Bugfix:IE - Doubled Float Margin Bug */
     display:inline;

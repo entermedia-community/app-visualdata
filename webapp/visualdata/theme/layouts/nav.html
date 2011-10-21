@@ -1,9 +1,29 @@
+
+
  <ul class="hlist">
-
 #set( $section = $content.section )
-#set( $selected = "class='selectedsection'" )
+ #set( $reporttype = $context.getRequestParameter("reporttype") )
+ #if($reporttype || $section=="assets")
+ #if(!$reporttype)
+ 	#set($assetType = "Approved Assets")
+ #elseif($reporttype=="01newlyuploaded")
+ 	#set($assetType = "Pending Approval")
+ #elseif($reporttype=="02deletedfiles")
+ 	#set($assetType = "Deleted Files")
+ #elseif($reporttype=="recentlyordered")
+ 	#set($assetType = "Recently Ordered")
+ #elseif($reporttype=="recentlyviewed")
+ 	#set($assetType = "Recently Viewed")
+ #end
+<li style="border-left: 0px; width: 200px; font-size: 16px; font-family: Arial;  padding-top: 5px"> <div>
 
-#if($user)
+<span style="width: 200px">$!assetType</span>
+
+</div></li>
+#end
+
+#set( $selected = "class='selectedsection'" )
+#if($user) 
  <li #if($section=="home")$selected#end ><a  href="$home$apphome/index.html">Home</a></li>
 
 #if( $canviewassets )
