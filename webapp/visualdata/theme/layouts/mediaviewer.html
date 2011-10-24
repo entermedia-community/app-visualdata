@@ -68,42 +68,44 @@ Asset Type Not Defined
 #end
       
 #foreach( $target in $views)
-<h3>$target</h3>
-$context.putPageValue("searcher", $searcher)  
-#if($asset.assettype && $asset.assettype.length() > 0)
-$context.putPageValue("view", "asset/assettype/$asset.assettype/$target.id")
-
-#else
-
-$context.putPageValue("view", "assettype/default/$target.id")
-
-#end 
-
-
-$context.putPageValue("data", $asset)
-
-$pages.include("$apphome/components/xml/detaileditor.html$detaileditsuffix", $context)
-#end
-<br/>
-
-#if ($isediting == true)
-<p>
-	<input type="submit" value="Save"/>
-</p>
-
-</form>
-#end
-#if( $caneditasset )
-<ul class="embuttons">
-<li>
-	#if ($isediting)
-		
+#if ($target.showonedit )
+	<h3>$target</h3>
+	$context.putPageValue("searcher", $searcher)  
+	#if($target.showonedit && $asset.assettype && $asset.assettype.length() > 0)
+	$context.putPageValue("view", "asset/assettype/$asset.assettype/$target.id")
+	
 	#else
-		<a href="$home$apphome/views/assets/index.html?sourcepath=${asset.sourcepath}&edit=true"><span>Edit</span></a>
+	
+	$context.putPageValue("view", "assettype/default/$target.id")
+	
+	#end 
+	
+	
+	$context.putPageValue("data", $asset)
+	
+	$pages.include("$apphome/components/xml/detaileditor.html$detaileditsuffix", $context)
 	#end
-</li>	
-</ul>
-#end	
+	<br/>
+#end
+	
+	#if ($isediting == true)
+	<p>
+		<input type="submit" value="Save"/>
+	</p>
+	
+	</form>
+	#end
+	#if( $caneditasset )
+	<ul class="embuttons">
+	<li>
+		#if ($isediting)
+			
+		#else
+			<a href="$home$apphome/views/assets/index.html?sourcepath=${asset.sourcepath}&edit=true"><span>Edit</span></a>
+		#end
+	</li>	
+	</ul>
+	#end	
 
 <div class="emdetailsbox">
 #if( $canviewviews )
