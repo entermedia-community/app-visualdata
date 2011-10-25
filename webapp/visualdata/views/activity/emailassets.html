@@ -8,9 +8,7 @@ No assets have been selected.
 	#set($ordersearcher = $searcherManager.getSearcher($catalogid, "order"))
 	#set($owner = $userManager.getUser($order.userid))
 	
-	<h2>Email</h2>
-
-<h2>this is a test</h2>
+	<h2>Email Preview</h2>
 	
 <form class="validate" id="usereditform" method="post" action="processorder.html">
 
@@ -32,9 +30,13 @@ $context.putPageValue("view", "order/emailform")
 
 <br/>
 $pages.include("/${applicationid}/components/xml/detaileditor.html", $context)
+<div id="previewemail">
 <input type="hidden" name="field" value="sharenote" />
+</div>
 <textarea name="sharenote.value" rows="25" >
+
 $pages.include("$apphome/views/activity/orderemailtemplate.html", $context)
+
 </textarea>
 $pages.include("/system/tools/html/textarea.html?htmltextarea=sharenote.value&fckheight=200&fckwidth=700")
 
