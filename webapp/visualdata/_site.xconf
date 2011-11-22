@@ -43,5 +43,5 @@
 	<script id="ui-components" src="/${applicationid}/components/javascript/ui-components.js">     </script>	
 
 	
-	
+	<path-action name="OrderModule.loadOrderManager"/>
 </page>
