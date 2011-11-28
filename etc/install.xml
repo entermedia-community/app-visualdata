@@ -19,7 +19,8 @@
   </target>
     
   <target name="unzip" depends="update-dependencies">
-    <unzip  src="${build}/visualdata.zip" dest=".." />
+  	<delete dir="../visualdata" />
+    <unzip  src="${build}/visualdata.zip" dest=".." overwrite="true"/>
   </target>
  
 </project>
