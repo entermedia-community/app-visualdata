@@ -1,5 +1,7 @@
 <h2>Edit $!data</h2>
-
+#if($notunique)
+<div class="common-warning">This entry already exists</div>
+#end
 <div id="editlayout">
 #set( $origURL = $context.getRequestParameter("origURL" ) )
 #set( $categoryid = $context.getRequestParameter("categoryid" ) )
