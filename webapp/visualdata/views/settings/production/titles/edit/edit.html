@@ -1,4 +1,4 @@
-<h3>Edit $!data</h3>
+<h2>Edit $!data</h2>
 
 <div id="editlayout">
 #set( $origURL = $context.getRequestParameter("origURL" ) )
@@ -8,13 +8,6 @@
 	#set( $view = "${searcher.searchType}/edit" )
 #end
 $context.putPageValue("view", $view)
-
-#set($titlesearcher = $searcherManager.getSearcher($catalogid, "title"))
-#set($titleid= $context.getRequestParameter("title.value"))
-#set($action= $context.getRequestParameter("action"))
-#set($title = $titlesearcher.searchById($titleid))
-$context.putPageValue("title",$title)
-
 <form id="dataeditor" name="dataeditor" method="post" action="$home$content.searchhome/edit/save.html" >
 	<input name="save" type="hidden" value="true" />
 	<input name="id" type="hidden" value="$!data.id" />
@@ -22,16 +15,10 @@ $context.putPageValue("title",$title)
 	<input name="catalogid" type="hidden" value="$searcher.catalogId" />
 	<input name="searchtype" type="hidden" value="$searcher.searchType" />
 	<input name="origURL"  type="hidden" value="$!origURL" />
-	<input name="title.value"  type="hidden" value="$title.id" />
-	<input name="field"  type="hidden" value="title" />
-	<input name="operation"  type="hidden" value="matches" />
-	<input name="operation"  type="hidden" value="matches" />
-	<input name="sortby"  type="hidden" value="name" />
+	<input name="title.value"  type="hidden" value="$data.id" />
+
 	<input name="view"  type="hidden" value="$view" />
-	<input name="hitssessionid"  type="hidden" value="$hits.sessionId" />
-	
-#set($titleid = $context.getRequestParameter("title.value"))	
-$data.setProperty("title",$titleid)
+
 $pages.include("/system/components/xml/detaileditor.html", $context)
 
 
@@ -39,14 +26,14 @@ $pages.include("/system/components/xml/detaileditor.html", $context)
 <li>
 	<a href="#" onclick="jQuery(this).closest('form').submit();"><span>Save</span></a>
 </li>
-<li><a href="$home$apphome/views/settings/production/episodes/fieldsearch.html?title.value=$!titleid&field=title&operation=matches"><span>Cancel</span></a></li>
-#if($action!='add')
+<li><a href='$home$content.searchhome/index.html'><span>Cancel</span></a></li>
+
 <li><a href='$home$content.searchhome/edit/delete.html?searchtype=$searcher.searchType&catalogid=$searcher.catalogId&id=$!data.id'>
 	<span>
 		Delete
 	</span></a>
 </li>
-#end
+
 </ul>
 <div id="messagearea">$!message
 </div>

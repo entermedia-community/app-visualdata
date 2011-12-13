@@ -1,0 +1,7 @@
+#if($notunique)
+<div class="common-warning">This entry already exists</div>
+
+#end
+
+$pages.include("./edit.html?action=add", $context)
+$pages.include("../results.html",$context)
