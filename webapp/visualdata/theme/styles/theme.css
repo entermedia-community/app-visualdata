@@ -308,3 +308,11 @@ select[name="newone"] {
 .edit-property table tr td {
 	padding: 6px 5px !important;
 }
+tr.active {
+    background-color: #ECA645;
+    font-weight: bold;
+}
+tr.active a {
+    color: #000000;
+}
+

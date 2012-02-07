@@ -10,10 +10,15 @@
 <h1>Broadcast Destinations</h1>
 <ul class="vlist">
 #set($searcher = $searcherManager.getSearcher($catalogid, "publishdestination"))
+#set($typeSearcher = $searcherManager.getSearcher($catalogid, "publishtype"))
+<table id="broadCastTable" class="emcontainer" style="width: 100%">
+<thead><tr><th>Destination Name&nbsp;</th><th>Transport</th></tr></thead>
 #foreach($title in $searcher.getAllHits())
-#set($current = $context.getRequestParameter("id")) 
-<li #if($current == $title.id) class="active" #end><a  href="$home$apphome/views/settings/publishing/edit/edit.html?id=$title.id">$title</a></li>
+	#set($current = $context.getRequestParameter("id")) 
+	#set($current2 = $typeSearcher.getAllHits().length)
+	<tr #if($current == $title.id) class="active" #end><td><a  href="$home$apphome/views/settings/publishing/edit/edit.html?id=$title.id">$title</a></td><td><a  href="$home$apphome/views/settings/publishing/edit/edit.html?id=$title.id">$typeSearcher.searchById($title.publishtype)</a></td></tr>
 #end
+</table>
 
 </ul>
 
@@ -76,6 +81,10 @@ $pages.includeContent()
 
 
 <script type="text/javascript" >
+
+	$(document).ready(function() {
+	  $('table#broadCastTable').tablesorter(); 
+	});
 
     toggleHit =  function(div, count, sessionid)
     {
