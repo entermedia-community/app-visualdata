@@ -1,46 +1,36 @@
+#set( $details = $searcherManager.getSearcher($catalogid,"order").getDetailsForView("order/advancedsearch",$context.getUserProfile() ) )
+
 
 <table width="100%">
 	<tr>
 
 		<td width="250" style="vertical-align: top; max-width: 324px;">
-			<div class="em-rounded">
-				<h2>order status</h2>
-				<ul class="vlist">
-					<li><input type="checkbox" id="processing">Processing</input>
-					</li>
-					<li><input type="checkbox" id="complete">Complete</input>
-					</li>
-					<li><input type="checkbox" id="error">Error</input>
-					</li>
-				</ul>
-			</div>
-			<br />
-			<div class="em-rounded">
-				<h2>order type</h2>
-				<ul class="vlist">
-					<li><input type="checkbox" id="upload">Upload</input>
-					</li>
-					<li><input type="checkbox" id="preview">Preview</input>
-					</li>
-					<li><input type="checkbox" id="publish">Publish</input>
-					</li>
-					<li><input type="checkbox" id="download">Download</input>
-					</li>
-				</ul>
-			</div>
-			<br />
-			<div class="em-rounded">
-				<h2>users</h2>
-				<ul class="vlist">
-					<li><input type="radio" id="myorders">My Orders</input>
-					</li>
-					<li><input type="radio" id="allorders">All Orders</input>
-					</li>
-				</ul>
-			</div></td>
+			<table 	 width="100%">
+<form  action="$apphome/components/orders/results/table.html" class="ajaxform" targetdiv="resultsdiv" style="margin-bottom:0;padding-right:15px;" target="_parent" name="dontshow" id="dontshow" valign="middle">
+	<input type="hidden"  name="oemaxlevel" value="1" />
+	<input type="hidden" name="catalogid" value="$!catalogid" />
+	<input type="hidden" name="searchtype" value="order" />
+	<input type="hidden" name="hitssessionid" value="$hits.sessionId" />
+	<input type="hidden" name="childquery" value="none" /> ## causes the search to re-run even when no types are selected	 
+				#foreach( $detail in $details)
+					$context.putPageValue("detail", $detail)
+					#if ($detail.isLeaf())
+						$pages.include("/${applicationid}/components/advancedsearch/detailedit.html", $context)
+					#else
+						$pages.include("/${applicationid}/components/advancedsearch/section.html", $context)
+					#end
+				#end
+				<tr><td>
+				<input type="submit" name="Search"/></td></tr>
+</form>
+			</table>	
+		</td>
 		<td width="10"></td>
 		<td style="vertical-align: top; padding-left: 0px;">
-			$pages.includeContent()</td>
+			<div id="resultsdiv">
+				$pages.includeContent()</div>
+				
+		</td>
 	</tr>
 </table>
 <div class="nothing" style="display: none;"></div>
