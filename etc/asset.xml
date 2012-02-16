@@ -1,0 +1,207 @@
+<properties>
+	<property id="assettype" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		searchtype="asset" datatype="list">Asset Type</property>
+	<property id="viewpoint" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" searchtype="asset"
+		datatype="list">Asset Viewpoint</property>
+	<property id="author" externalid="Author" catalogid="media/catalogs/client1"
+		index="true" stored="true" searchtype="asset">Author</property>
+	<property id="bitspersample" externalid="BitsPerSample"
+		catalogid="media/catalogs/client1" index="true" stored="true" type="text"
+		searchtype="asset" datatype="text">Bits Per Sample</property>
+	<property id="cammaker" externalid="Make" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="text" searchtype="asset" datatype="text">Camera
+		Maker
+	</property>
+	<property id="cammodel" externalid="Model" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="text" searchtype="asset" datatype="text">Camera
+		Model
+	</property>
+	<property id="caption" externalid="ImageDescription,Caption/Abstract"
+		catalogid="media/catalogs/client1" index="true" keyword="true" stored="true"
+		editable="true" searchtype="asset">Caption</property>
+	<property id="catalogid" catalogid="entermedia" type="list"
+		viewtype="list" searchtype="asset" listid="catalogs" datatype="list">Catalog
+	</property>
+	<property id="category" externalid="assetcategory.categoryid"
+		catalogid="media/catalogs/client1" searchtype="asset"
+		query="assetcategory.assetid = asset.id">Categories</property>
+	<property id="colortype" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="list" viewtype="list" searchtype="asset"
+		datatype="list">Color</property>
+	<property id="comment" externalid="Comment,UserComment"
+		catalogid="media/catalogs/client1" index="true" stored="true"
+		editable="true" searchtype="asset">Comment</property>
+	<property id="compression" externalid="Compression" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="text" searchtype="asset" datatype="text">Compression
+	</property>
+	<property id="contributor" externalid="Contributor" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="text" searchtype="asset" datatype="text">Contributor
+	</property>
+	<property id="country" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		searchtype="asset" listchild="state" datatype="list" foreignkeyid="region">Country
+	</property>
+	<property id="assetcreationdate" externalid="Create Date,MediaCreateDate,CreateDate"
+		catalogid="media/catalogs/client1" index="true" stored="true"
+		editable="true" type="date" searchtype="asset" datatype="date">Created On
+	</property>
+	<property id="cumulusid" catalogid="media/catalogs/client1"
+		index="true" stored="true" searchtype="asset">Cumulus ID</property>
+	<property id="description" externalid="searchtext" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" searchtype="asset">Description
+	</property>
+	<property id="editstatus" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="radioselect"
+		searchtype="asset" listid="asset/editstatus" datatype="list">Edit Status
+	</property>
+	<property id="episode" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		sort="name" searchtype="asset" datatype="list" foreignkeyid="title">Episode
+		Number
+	</property>
+	<property id="extrakeywords" externalid="Keywords"
+		catalogid="media/catalogs/client1" index="true" keyword="true" stored="true"
+		editable="true" searchtype="asset">Extra Keywords</property>
+	<property id="fileformat" externalid="File Format" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" viewtype="list" searchtype="asset">
+		File
+		Format
+	</property>
+	<property id="name" catalogid="media/catalogs/client1" index="true"
+		keyword="true" stored="true" searchtype="asset">File Name</property>
+	<property id="name_sortable" catalogid="media/catalogs/client1"
+		searchtype="asset">File Name</property>
+	<property id="filesize" externalid="FileSize" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="number" searchtype="asset" datatype="number">File
+		Size
+	</property>
+	<property id="framerate" externalid="VideoFrameRate"
+		catalogid="media/catalogs/client1" index="true" stored="true" type="text"
+		searchtype="asset" datatype="text">Frame rate</property>
+	<property id="fulltext" catalogid="media/catalogs/client1"
+		keyword="true" searchtype="asset">Full Text</property>
+	<property id="height" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="number" searchtype="asset" datatype="number">Height
+	</property>
+	<property id="iso" externalid="ISO" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="text" searchtype="asset" datatype="text">ISO
+	</property>
+	<property id="id" catalogid="media/catalogs/client1" keyword="true"
+		searchtype="asset">Id</property>
+	<property id="imageorientation" externalid="Orientation"
+		catalogid="media/catalogs/client1" index="true" stored="true"
+		editable="true" type="list" searchtype="asset" listid="imageorientation"
+		datatype="list">Image Rotation</property>
+	<property id="importstatus" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" searchtype="asset"
+		listid="asset/importstatus" datatype="list">Import Status</property>
+	<property id="assettitle" externalid="By-lineTitle,Title"
+		catalogid="media/catalogs/client1" index="true" keyword="true" stored="true"
+		editable="true" searchtype="asset">Ingest Comments</property>
+	<property id="jobnotes" externalid="Notes" catalogid="media/catalogs/client1"
+		index="true" keyword="true" stored="true" editable="true" searchtype="asset">Job
+		Notes
+	</property>
+	<property id="language" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		sort="textUp" searchtype="asset" datatype="list">Language</property>
+	<property id="language" catalogid="media/catalogs/client1"
+		type="list" viewtype="list" searchtype="asset" datatype="list">Language
+	</property>
+	<property id="assetmodificationdate" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="date" searchtype="asset" datatype="date">Last
+		Modified
+	</property>
+	<property id="length" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="number" viewtype="timelength"
+		searchtype="asset" datatype="number">Length</property>
+	<property id="localpath" catalogid="media/catalogs/client1"
+		index="true" stored="true" searchtype="asset">Local Path</property>
+	<property id="longcaption" catalogid="media/catalogs/client1"
+		keyword="true" editable="true" searchtype="asset">Long Caption</property>
+	<property id="new3" catalogid="media/catalogs/client1" index="true"
+		stored="true" editable="true" searchtype="asset">New 3</property>
+	<property id="owner" catalogid="media/catalogs/client1" index="true"
+		keyword="true" stored="true" editable="true" viewtype="list"
+		searchtype="asset" query="groups:developers" listid="user"
+		listcatalogid="system">Owner</property>
+	<property id="position" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="position" viewtype="map" searchtype="asset"
+		datatype="position">Position</property>
+	<property id="previewstatus" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		searchtype="asset" listid="asset/previewstatus" datatype="list">Preview
+		Status
+	</property>
+	<property id="primaryfile" catalogid="media/catalogs/client1"
+		index="true" stored="true" searchtype="asset">Primary File Name</property>
+	<property id="publisheds3" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="boolean" searchtype="asset"
+		datatype="boolean">Published S3</property>
+	<property id="purpose" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		searchtype="asset" datatype="list">Purpose</property>
+	<property id="recordmodificationdate" catalogid="media/catalogs/client1"
+		index="true" stored="true" searchtype="asset">Record Date</property>
+	<property id="region" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		searchtype="asset" listchild="country" datatype="list">Region</property>
+	<property id="relatedasset" externalid="assetrelated.parentid"
+		catalogid="media/catalogs/client1" index="true" stored="true" type="textjoin"
+		searchtype="asset" query="assetrelated.assetid = asset.id" datatype="textjoin">Related
+		Assets</property>
+	<property id="royaltyfree" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="boolean" searchtype="asset"
+		datatype="boolean">Royalty Free</property>
+	<property id="source" externalid="Source" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="text" searchtype="asset" datatype="text">Source
+	</property>
+	<property id="sourcepath" catalogid="media/catalogs/client1"
+		index="true" stored="true" searchtype="asset">Source Path</property>
+	<property id="ethnicitydetailed" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" viewtype="list"
+		searchtype="asset" datatype="list" foreignkeyid="ethnicity">Specific Ethnicity
+	</property>
+	<property id="state" catalogid="media/catalogs/client1" index="true"
+		stored="true" editable="true" type="list" viewtype="list" searchtype="asset"
+		datatype="list" foreignkeyid="country">State</property>
+	<property id="stocknumber" catalogid="media/catalogs/client1"
+		index="true" keyword="true" stored="true" editable="true" searchtype="asset">Stock
+		Number</property>
+	<property id="test4" catalogid="media/catalogs/client1"
+		searchtype="asset">Test_4</property>
+	<property id="timezone" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" searchtype="asset"
+		listcatalogid="timezone_list" listid="timezone_list" datatype="list">Time
+		Zone</property>
+	<property id="title" catalogid="media/catalogs/client1" index="true"
+		stored="true" editable="true" type="list" viewtype="list" sort="name"
+		searchtype="asset" datatype="list">Title</property>
+	<property id="uploadstatus" catalogid="media/catalogs/client1"
+		index="true" stored="true" editable="true" type="list" searchtype="asset"
+		datatype="list">Upload Status</property>
+	<property id="assetaddeddate" externalid="Record Creation Date"
+		catalogid="media/catalogs/client1" index="true" stored="true"
+		editable="true" type="date" searchtype="asset" datatype="date">Uploaded Date
+	</property>
+	<property id="assetviews" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="number" viewtype="number" searchtype="asset"
+		datatype="number">Views</property>
+	<property id="assetviews_sortable" catalogid="media/catalogs/client1"
+		type="number" searchtype="asset" datatype="number">Views</property>
+	<property id="assetvotes_sortable" catalogid="media/catalogs/client1"
+		type="number" searchtype="asset" datatype="number">Vote Count</property>
+	<property id="assetvotes" catalogid="media/catalogs/client1"
+		index="true" stored="true" type="number" searchtype="asset" datatype="number">Vote
+		Rank</property>
+	<property id="width" catalogid="media/catalogs/client1" index="true"
+		stored="true" type="number" searchtype="asset" datatype="number">Width
+	</property>
+	<property id="zone" catalogid="media/catalogs/client1"
+		searchtype="asset">Zone</property>
+	<property id="Test3" catalogid="media/catalogs/client1"
+		viewtype="list" searchtype="asset" listid="test3list" listcatalogid="test3list">test3
+	</property>
+</properties>
